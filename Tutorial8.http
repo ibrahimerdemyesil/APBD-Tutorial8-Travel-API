@@ -1,0 +1,40 @@
+@Tutorial8_HostAddress = http://localhost:5128
+
+GET {{Tutorial8_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+### Get all trips
+GET http://localhost:5128/api/trips
+Accept: application/json
+
+### Get trip by ID
+GET http://localhost:5128/api/trips/1
+Accept: application/json
+
+### Get trips for a client
+GET http://localhost:5128/api/clients/1/trips
+Accept: application/json
+
+### Add new client
+POST http://localhost:5128/api/clients
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "telephone": "123456789",
+  "pesel": "98765432101"
+}
+
+### Assign client to trip
+PUT http://localhost:5128/api/clients/1/trips/3
+Content-Type: application/json
+
+{
+  "paymentDate": "2025-05-06T00:00:00"
+}
+
+### Remove client from trip
+DELETE http://localhost:5128/api/clients/1/trips/3

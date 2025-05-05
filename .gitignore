@@ -1,0 +1,20 @@
+﻿# Build results
+bin/
+obj/
+out/
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+*.sln.iml
+
+# Others
+*.log
+*.db
+*.DS_Store
+
+# User secrets & settings
+secrets.json
+appsettings.*.json
